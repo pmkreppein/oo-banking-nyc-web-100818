@@ -20,6 +20,8 @@ class Transfer
       self.status = "rejected"
       puts "Transaction rejected. Please check your account balance."
 end
+end
+
 
 def transfer_mechanics
     self.sender.balance -= self.amount
