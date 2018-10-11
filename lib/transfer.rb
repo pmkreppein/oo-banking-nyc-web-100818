@@ -8,4 +8,8 @@ class Transfer
     @amount = a
     @status = "pending"
   end
+  
+  def valid?
+    self.receiver.valid? && self.sender.valid?
+  end
 end
