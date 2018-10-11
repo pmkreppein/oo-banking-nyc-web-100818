@@ -26,7 +26,7 @@ end
 def transfer_mechanics
     self.sender.balance -= self.amount
     self.receiver.balance += self.balance
-    self.status == complete
+    self.status == "complete"
 end
    
       
