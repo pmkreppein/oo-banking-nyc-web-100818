@@ -13,6 +13,6 @@ class BankAccount
   end
   
   def display_balance
-    puts self.balance
+    self.balance
   end
 end #clsend
