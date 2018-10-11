@@ -14,7 +14,10 @@ class Transfer
   end
   
   def execute_transfer
-    
+    if self.status != "complete"
+      transfer_mechanics
+    else 
+      
 end
 
 def transfer_mechanics
@@ -22,6 +25,7 @@ def transfer_mechanics
     self.receiver.balance += self.balance
     self.status == complete
 end
-    
+   
+      
 
 end #clsend
