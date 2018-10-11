@@ -17,7 +17,8 @@ class Transfer
     if self.status != "complete"
       transfer_mechanics
     else 
-      
+      self.status = "rejected"
+      puts "Transaction rejected. Please check your account balance."
 end
 
 def transfer_mechanics
