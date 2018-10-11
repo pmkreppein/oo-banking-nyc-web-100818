@@ -13,21 +13,15 @@ class Transfer
     self.receiver.valid? && self.sender.valid?
   end
   
-  def execute_transfer
-    if self.status != "complete"
-      transfer_mechanics
-    else 
-      self.status = "rejected"
-      puts "Transaction rejected. Please check your account balance."
+  def execute_transaction
+    if valid? && sender.balance > amount && self.status == "pending"
+      sender.balance -= amount
+      receiver.balance += amount
+      self.status = "complete"
+    else
+      reject_transfer
+    end
   end
-end
-
-
-def transfer_mechanics
-    self.sender.balance -= self.amount
-    self.receiver.balance += self.balance
-    self.status == "complete"
-end
    
       
 
