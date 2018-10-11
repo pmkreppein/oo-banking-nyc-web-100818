@@ -1,11 +1,11 @@
 class Transfer
   # your code here
-  attr_reader :s, :r, :a, :s
+  attr_reader :sender, :reciever, :amound, :status
   
   def initialize(s, r, a)
-    @s = s
-    @r = r
-    @a = a
-    @s = "pending"
+    @sender = s
+    @reciever = r
+    @amount = a
+    @status = "pending"
   end
 end
