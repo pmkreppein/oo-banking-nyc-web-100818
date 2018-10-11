@@ -11,7 +11,7 @@ class Transfer
   end
   
   def valid?
-    self.receiver.valid? && self.sender.valid?
+    receiver.valid? && sender.valid?
   end
   
   def execute_transaction
