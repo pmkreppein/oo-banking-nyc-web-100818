@@ -9,10 +9,10 @@ class BankAccount
   end
 
   def deposit(amt)
-    self.balance += amt
+    @balance += amt
   end
   
   def display_balance
-   "Your balance is #{self.balance}"
+   "Your balance is #{@balance}"
   end
 end #clsend
